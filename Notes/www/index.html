@@ -7,7 +7,8 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script src="./js/custom.js"></script>
+    <!-- <script src="./js/custom.js"></script> -->
+    <script src="./js/dbStuff.js"></script>
     <title>Notes</title>
 </head>
 
@@ -31,4 +32,6 @@
     document.getElementById("btnErase").addEventListener("click", function(){
         clearCanvas();
     });
+
+    addEventListener("load", initializeDb(), false);
 </script>

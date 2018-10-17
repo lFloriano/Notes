@@ -14,22 +14,23 @@ function clearCanvas(){
 
 //their stuff
 function populateDB(tx) {
-    tx.executeSql('DROP TABLE IF EXISTS DEMO');
-    tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data, extra)');
-    tx.executeSql('INSERT INTO DEMO (id, data, extra) VALUES (1, "First row", 12)');
-    tx.executeSql('INSERT INTO DEMO (id, data, extra) VALUES (2, "second row", 23)');
-    tx.executeSql('INSERT INTO DEMO (id, data, extra) VALUES (3, "third row", 34)');
-    tx.executeSql('INSERT INTO DEMO (id, data, extra) VALUES (4, "fourth row", 45)');
+
+    // tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data, extra)');
+    // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("First row", 12)');
+    // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("second row", 23)');
+    // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("third row", 34)');
+    // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("fourth row", 45)');
     tx.executeSql('SELECT * FROM DEMO', [], querySuccess2, errorCB2);
+
 
 }
 
 function errorCB(err) {
-   alert("Error processing SQL: "+err);
+   alert("Error processing SQL: "+err.message);
 }
 
 function errorCB2(err) {
-    alert("Erro no select: "+err);
+    alert("Erro no select: "+err.message);
  }
 
 function successCB() {
