@@ -28,10 +28,17 @@ function selectErrorCb(err){
 }
 
 function selectSuccessCb(tx, result){
-    let rows = result.rows;
+    var rows = result.rows;
+    var containerDiv = document.getElementById('noteContainer');
 
-    for(let i = 0; i < rows.length; i++ ){
-        console.log("Id: " + rows.item(i).Id + " Content: " + rows.item(i).Content);
+    for(var i = 0; i < rows.length; i++ ){
+
+        //console.log("Id: " + rows.item(i).Id + " Content: " + rows.item(i).Content);
+
+        var noteDiv = document.createElement("div");
+        var notetext = document.createTextNode(rows.item(i).Content);
+        noteDiv.appendChild(notetext);
+        containerDiv.appendChild(noteDiv);
     }
 }
 

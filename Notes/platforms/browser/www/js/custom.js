@@ -20,7 +20,7 @@ function populateDB(tx) {
     // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("second row", 23)');
     // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("third row", 34)');
     // tx.executeSql('INSERT INTO DEMO (data, extra) VALUES ("fourth row", 45)');
-    tx.executeSql('SELECT * FROM DEMO', [], querySuccess2, errorCB2);
+    // tx.executeSql('SELECT * FROM DEMO', [], querySuccess2, errorCB2);
 
 
 }
@@ -39,7 +39,7 @@ function successCB() {
 
 function querySuccess2(tx, results){
     //console.log("Insert ID = " + results.rows);
-
+    
     for(var i = 0; i < results.rows.length; i++){
         console.log("extra: "+ results.rows.item(i).extra+ " data: " + results.rows.item(i).data);
 
