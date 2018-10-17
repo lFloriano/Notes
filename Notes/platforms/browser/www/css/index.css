@@ -1,0 +1,17 @@
+.text-area{
+    width: 90vw;
+    height: 75vh;
+    margin: 0 auto;
+    display: block;
+}
+
+.button-container{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.button-container button{
+    width: 30vw;
+}
