@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="./js/dbStuff.js"></script>
+        <title>Notes</title>
+    </head>
+    <body>
+        <div>
+            <textarea id='noteContent' class="note-text-area" resize=></textarea>
+            <div class="options-container">
+                <a href="./Index.html" class="button btn-cancel">Cancel</a>
+                <button onclick="SaveNote()" id='btnSave' class="button btn-ok">Save</button>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    //listeners
+    // document.getElementById("btnSave").addEventListener("click", function(){
+    //     saveNote();
+    // }); 
+
+    // document.getElementById("btnErase").addEventListener("click", function(){
+    //     clearCanvas();
+    // });
+    //document.getElementsByTagName('body')[0].addEventListener("load", initializeDb(), false);
+    // document.getElementById('btnSave').addEventListener("click", SaveNote(), false);
+</script>
